@@ -1,0 +1,2460 @@
+:root{
+    --white:#ffffff;
+    --off-white:#f8f8f8;
+    --gold:#D4AF37;
+    --gold-light:#F7E7A1;
+    --black:#111111;
+    --gray:#777777;
+    --border:#ececec;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    color:var(--black);
+    background:var(--white);
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:90px;
+}
+
+.nav-left,
+.nav-right{
+    display:flex;
+    gap:35px;
+}
+
+.navbar a{
+    color:var(--black);
+    text-transform:uppercase;
+    font-size:.85rem;
+    letter-spacing:2px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:var(--gold);
+}
+
+.logo-center{
+    text-align:center;
+}
+
+.crown{
+    font-size:1.5rem;
+    color:var(--gold);
+    margin-bottom:5px;
+}
+
+.logo-center h1{
+    font-family:'Cinzel',serif;
+    font-size:2rem;
+    letter-spacing:4px;
+}
+
+.logo-center span{
+    display:block;
+    letter-spacing:4px;
+    font-size:.75rem;
+    margin-top:5px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:0 20px;
+}
+
+.hero-content h2{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    line-height:1.1;
+    max-width:1000px;
+}
+
+.hero-content span{
+    color:var(--gold-light);
+}
+
+.hero-content p{
+    margin-top:25px;
+    font-size:1.2rem;
+    letter-spacing:1px;
+}
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    padding:16px 35px;
+    background:var(--gold);
+    color:white;
+    font-weight:600;
+    border-radius:50px;
+    transition:.4s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    padding:16px 35px;
+    border:2px solid white;
+    color:white;
+    border-radius:50px;
+    transition:.4s;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:black;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    padding:120px 0;
+}
+
+.intro .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.intro-image img{
+    border-radius:12px;
+}
+
+.intro-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.intro-content p{
+    line-height:2;
+    color:var(--gray);
+}
+
+.text-link{
+    display:inline-block;
+    margin-top:30px;
+    color:var(--gold);
+    font-weight:600;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+}
+
+.section-title p{
+    margin-top:15px;
+    color:var(--gray);
+}
+
+/* ================= CARDS ================= */
+
+.services-preview{
+    padding:120px 5%;
+    background:var(--off-white);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.card{
+    background:white;
+    overflow:hidden;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    height:350px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:30px;
+}
+
+.card-content h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:15px;
+}
+
+.card-content p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+.card-content a{
+    display:inline-block;
+    margin-top:20px;
+    color:var(--gold);
+    font-weight:600;
+}
+
+/* ================= COVERAGE ================= */
+
+.coverage{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.coverage h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.coverage p{
+    max-width:900px;
+    margin:auto;
+    line-height:2;
+    color:var(--gray);
+}
+
+/* ================= SHOWCASE ================= */
+
+.showcase{
+    position:relative;
+    height:700px;
+    overflow:hidden;
+}
+
+.showcase img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.showcase::after{
+    content:"";
+    position:relative;
+    inset:0;
+    background:rgba(0,0,0,0);
+}
+
+.showcase-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+   // transform:translate(50%,50%);
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+.showcase-content h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+}
+
+.showcase-content p{
+    margin-top:20px;
+    font-size:1.2rem;
+}
+
+/* ================= FEATURED SERVICES ================= */
+
+.featured-services{
+    padding:120px 5%;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.service-box{
+    border:1px solid var(--border);
+    padding:50px;
+    text-align:center;
+    transition:.4s;
+}
+
+.service-box:hover{
+    background:var(--gold);
+    color:white;
+    transform:translateY(-5px);
+}
+
+.service-box h3{
+    font-family:'Cinzel',serif;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+    padding:120px 5%;
+    background:var(--off-white);
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.testimonial{
+    background:white;
+    padding:60px;
+    border-radius:12px;
+}
+
+.testimonial p{
+    font-size:1.1rem;
+    line-height:2;
+    color:var(--gray);
+}
+
+.testimonial span{
+    display:block;
+    margin-top:25px;
+    font-weight:600;
+    color:var(--gold);
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:140px 20px;
+    text-align:center;
+}
+
+.cta h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    margin-bottom:25px;
+}
+
+.cta p{
+    color:var(--gray);
+    max-width:800px;
+    margin:auto;
+    line-height:2;
+}
+
+.cta .btn-primary{
+    display:inline-block;
+    margin-top:40px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111;
+    color:white;
+    padding:100px 5% 50px;
+}
+
+.footer-logo{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.footer-logo h2{
+    font-family:'Cinzel',serif;
+    letter-spacing:4px;
+}
+
+.footer-logo span{
+    letter-spacing:3px;
+    font-size:.8rem;
+}
+
+.footer-links{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-bottom:60px;
+}
+
+.footer-links h4{
+    margin-bottom:25px;
+    color:var(--gold);
+}
+
+.footer-links a{
+    display:block;
+    color:#ddd;
+    margin-bottom:12px;
+}
+
+.footer-links p{
+    margin-bottom:12px;
+    color:#ddd;
+}
+
+.copyright{
+    text-align:center;
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#999;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+    .cards,
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .intro .container{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h2{
+        font-size:4rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        padding:20px 0;
+    }
+
+    .nav-left,
+    .nav-right{
+        display:none;
+    }
+
+    .cards,
+    .service-grid,
+    .testimonial-grid,
+    .footer-links{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h2{
+        font-size:2.8rem;
+    }
+
+    .showcase-content h2{
+        font-size:2.5rem;
+    }
+
+    .cta h2{
+        font-size:2.5rem;
+    }
+
+    .intro-content h2,
+    .coverage h2,
+    .section-title h2{
+        font-size:2rem;
+    }
+}
+
+/* ================= WEDDINGS PAGE ================= */
+
+.page-hero{
+    position:relative;
+    height:80vh;
+}
+
+.page-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.page-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.page-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+.page-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+}
+
+.page-hero-content p{
+    margin-top:20px;
+    font-size:1.1rem;
+}
+
+.wedding-intro{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.wedding-intro h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.wedding-intro p{
+    max-width:900px;
+    margin:auto;
+    line-height:2;
+    color:#777;
+}
+
+.wedding-section{
+    padding:120px 5%;
+}
+
+.light-bg{
+    background:#f8f8f8;
+}
+
+.wedding-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.wedding-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.wedding-card:hover{
+    transform:translateY(-10px);
+}
+
+.wedding-card img{
+    height:380px;
+    object-fit:cover;
+}
+
+.feature-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    padding:120px 8%;
+}
+
+.feature-image img{
+    border-radius:12px;
+}
+
+.feature-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.feature-content p{
+    line-height:2;
+    color:#777;
+}
+
+.wedding-services{
+    padding:120px 5%;
+    background:#f8f8f8;
+}
+
+.service-card{
+    background:white;
+    overflow:hidden;
+}
+
+.service-card img{
+    height:280px;
+    object-fit:cover;
+}
+
+.service-card h3{
+    font-family:'Cinzel',serif;
+    padding:25px 25px 10px;
+}
+
+.service-card p{
+    padding:0 25px 30px;
+    line-height:1.8;
+    color:#777;
+}
+
+@media(max-width:900px){
+
+    .wedding-grid,
+    .service-grid,
+    .feature-section{
+        grid-template-columns:1fr;
+    }
+
+    .page-hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .feature-content h2,
+    .wedding-intro h2{
+        font-size:2rem;
+    }
+}
+/* =====================================
+   CORPORATE PAGE ENHANCEMENTS
+===================================== */
+
+.page-hero-content h1{
+    text-shadow:0 4px 20px rgba(0,0,0,.25);
+}
+
+.wedding-card,
+.service-card{
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+    transition:all .4s ease;
+}
+
+.wedding-card:hover,
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.wedding-card img,
+.service-card img{
+    transition:transform .6s ease;
+}
+
+.wedding-card:hover img,
+.service-card:hover img{
+    transform:scale(1.05);
+}
+
+/* Corporate Intro */
+
+.wedding-intro{
+    position:relative;
+}
+
+.wedding-intro::after{
+    content:"";
+    width:80px;
+    height:3px;
+    background:var(--gold);
+    display:block;
+    margin:30px auto 0;
+}
+
+/* Section Styling */
+
+.wedding-section{
+    position:relative;
+}
+
+.wedding-section .section-title h2{
+    position:relative;
+    display:inline-block;
+}
+
+.wedding-section .section-title h2::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:var(--gold);
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-15px;
+}
+
+/* Corporate Cards */
+
+.card-content{
+    padding:30px;
+}
+
+.card-content h3{
+    font-family:'Cinzel', serif;
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.card-content p{
+    color:#777;
+    line-height:1.8;
+}
+
+/* Feature Section */
+
+.feature-section{
+    background:#fff;
+}
+
+.feature-content h2{
+    color:#111;
+}
+
+.feature-content p{
+    font-size:1.05rem;
+}
+
+/* Service Cards */
+
+.service-card{
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.service-card h3{
+    color:#111;
+}
+
+.service-card p{
+    color:#777;
+}
+
+/* CTA Upgrade */
+
+.cta{
+    background:linear-gradient(
+        to bottom,
+        #ffffff,
+        #f8f8f8
+    );
+}
+
+.cta h2{
+    color:#111;
+}
+
+.cta p{
+    max-width:850px;
+}
+
+/* Luxury Gold Hover */
+
+.btn-primary{
+    transition:.4s ease;
+}
+
+.btn-primary:hover{
+    background:#c89c24;
+    transform:translateY(-3px);
+}
+
+/* Image Overlay Effect */
+
+.wedding-card{
+    position:relative;
+}
+
+.wedding-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.05)
+    );
+    opacity:0;
+    transition:.4s;
+    pointer-events:none;
+}
+
+.wedding-card:hover::before{
+    opacity:1;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .wedding-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .wedding-grid,
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page-hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .page-hero-content p{
+        font-size:1rem;
+    }
+
+    .feature-section{
+        padding:80px 5%;
+    }
+
+    .feature-content h2{
+        font-size:2rem;
+    }
+
+}
+/* =====================================
+   FOOD & BEVERAGES PAGE
+===================================== */
+
+.food-hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.food-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.food-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.food-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:#fff;
+    z-index:2;
+}
+
+.food-hero-content span{
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#f5deb3;
+}
+
+.food-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    margin:20px 0;
+}
+
+.food-intro{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.food-intro h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.food-intro p{
+    max-width:900px;
+    margin:auto;
+    color:#777;
+    line-height:2;
+}
+
+.cuisine-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+    padding:120px 8%;
+}
+
+.reverse{
+    background:#f8f8f8;
+}
+
+.cuisine-image img{
+    border-radius:12px;
+    height:650px;
+    object-fit:cover;
+}
+
+.cuisine-content span{
+    color:#D4AF37;
+    font-size:3rem;
+    font-family:'Cinzel',serif;
+}
+
+.cuisine-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin:20px 0;
+}
+
+.cuisine-content p{
+    color:#777;
+    line-height:2;
+}
+
+.mini-gallery{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+}
+
+.mini-gallery img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.buffet-showcase{
+    position:relative;
+    height:700px;
+}
+
+.buffet-showcase img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.buffet-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+}
+
+.buffet-content h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+}
+
+.counter-section{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:120px 5%;
+}
+
+.counter-box img{
+    height:350px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.counter-box h3{
+    margin-top:20px;
+    text-align:center;
+    font-family:'Cinzel',serif;
+}
+
+.chef-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+    padding:120px 8%;
+    background:#f8f8f8;
+}
+
+.chef-image img{
+    border-radius:12px;
+}
+
+.chef-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.chef-content p{
+    color:#777;
+    line-height:2;
+}
+
+.food-cta{
+    padding:140px 20px;
+    text-align:center;
+}
+
+.food-cta h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    max-width:900px;
+    margin:auto auto 40px;
+}
+
+@media(max-width:900px){
+
+    .cuisine-section,
+    .chef-section{
+        grid-template-columns:1fr;
+    }
+
+    .counter-section{
+        grid-template-columns:1fr;
+    }
+
+    .food-hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .cuisine-content h2,
+    .chef-content h2{
+        font-size:2rem;
+    }
+}
+/* ==================================
+   ENTERTAINMENT PAGE
+================================== */
+
+.entertainment-hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.entertainment-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.entertainment-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
+}
+
+.entertainment-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+.entertainment-hero-content span{
+    color:#D4AF37;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.entertainment-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    margin:20px 0;
+}
+
+.entertainment-intro{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.entertainment-intro h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.entertainment-intro p{
+    max-width:900px;
+    margin:auto;
+    line-height:2;
+    color:#777;
+}
+
+.entertainment-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:100px 5%;
+    background:#111;
+}
+
+.entertainment-card{
+    background:#1b1b1b;
+    overflow:hidden;
+}
+
+.entertainment-card img{
+    height:350px;
+    object-fit:cover;
+}
+
+.entertainment-card h3{
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-family:'Cinzel',serif;
+}
+
+.party-section{
+    padding:120px 5%;
+}
+
+.party-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.party-title h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+}
+
+.party-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.party-box img{
+    height:450px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.party-box h3{
+    text-align:center;
+    margin-top:20px;
+    font-family:'Cinzel',serif;
+}
+
+.production-showcase{
+    position:relative;
+    height:700px;
+}
+
+.production-showcase img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.production-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+}
+
+.production-content h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+}
+
+.special-events{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    padding:120px 5%;
+}
+
+.special-card img{
+    height:450px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.special-content{
+    padding-top:25px;
+}
+
+.special-content h3{
+    font-family:'Cinzel',serif;
+}
+
+.entertainment-cta{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:140px 20px;
+}
+
+.entertainment-cta h2{
+    font-family:'Cinzel',serif;
+    font-size:3.5rem;
+    margin-bottom:25px;
+}
+
+.entertainment-cta p{
+    max-width:800px;
+    margin:auto;
+    margin-bottom:40px;
+    line-height:2;
+}
+
+@media(max-width:900px){
+
+    .entertainment-grid,
+    .party-grid,
+    .special-events{
+        grid-template-columns:1fr;
+    }
+
+    .entertainment-hero-content h1{
+        font-size:3rem;
+    }
+
+    .production-content h2{
+        font-size:2.5rem;
+    }
+}
+/* ==================================
+   LUXURY RENTALS PAGE
+================================== */
+
+.rental-hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.rental-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.rental-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.rental-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+.rental-hero-content span{
+    color:#D4AF37;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.rental-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    margin:20px 0;
+}
+
+.rental-intro{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.rental-intro h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.rental-intro p{
+    max-width:900px;
+    margin:auto;
+    line-height:2;
+    color:#777;
+}
+
+.fleet-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    padding:120px 8%;
+}
+
+.reverse-fleet{
+    background:#f8f8f8;
+}
+
+.fleet-image img{
+    height:650px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.fleet-content span{
+    color:#D4AF37;
+    font-size:3rem;
+    font-family:'Cinzel',serif;
+}
+
+.fleet-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin:20px 0;
+}
+
+.fleet-content p{
+    color:#777;
+    line-height:2;
+}
+
+.suv-showcase{
+    position:relative;
+    height:700px;
+}
+
+.suv-showcase img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.suv-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+}
+
+.suv-content h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+}
+
+.rental-services{
+    padding:120px 5%;
+}
+
+.rental-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.rental-card{
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.rental-card img{
+    height:350px;
+    object-fit:cover;
+}
+
+.rental-card h3{
+    padding:25px 25px 10px;
+    font-family:'Cinzel',serif;
+}
+
+.rental-card p{
+    padding:0 25px 30px;
+    color:#777;
+}
+
+.convoy-section{
+    position:relative;
+    height:700px;
+}
+
+.convoy-section img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.convoy-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.convoy-overlay h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+}
+
+.rental-cta{
+    text-align:center;
+    padding:140px 20px;
+}
+
+.rental-cta h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.rental-cta p{
+    color:#777;
+    margin-bottom:40px;
+}
+
+@media(max-width:900px){
+
+    .fleet-section,
+    .rental-grid{
+        grid-template-columns:1fr;
+    }
+
+    .rental-hero-content h1{
+        font-size:3rem;
+    }
+
+    .fleet-content h2,
+    .rental-intro h2{
+        font-size:2rem;
+    }
+
+    .convoy-overlay h2,
+    .suv-content h2{
+        font-size:2.5rem;
+    }
+}
+/* ==================================
+   CELEBRATIONS PAGE
+================================== */
+
+.celebration-hero{
+    position:relative;
+    height:90vh;
+}
+
+.celebration-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.celebration-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.celebration-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+}
+
+.celebration-hero-content span{
+    color:#D4AF37;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.celebration-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    margin:20px 0;
+}
+
+.celebration-intro{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.celebration-intro h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.celebration-intro p{
+    max-width:900px;
+    margin:auto;
+    line-height:2;
+    color:#777;
+}
+
+.celebration-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:100px 5%;
+}
+
+.celebration-card img{
+    height:350px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.celebration-card h3{
+    text-align:center;
+    margin-top:20px;
+    font-family:'Cinzel',serif;
+}
+
+.celebration-feature{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    padding:120px 8%;
+    background:#f8f8f8;
+    align-items:center;
+}
+
+.feature-left h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.feature-left p{
+    color:#777;
+    line-height:2;
+}
+
+.feature-left ul{
+    margin-top:30px;
+}
+
+.feature-left li{
+    margin-bottom:15px;
+    color:#555;
+}
+
+.feature-right img{
+    border-radius:12px;
+}
+
+.special-celebrations{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    padding:120px 5%;
+}
+
+.special-box img{
+    height:300px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.special-box h3{
+    text-align:center;
+    margin-top:15px;
+    font-family:'Cinzel',serif;
+}
+
+.celebration-cta{
+    text-align:center;
+    padding:140px 20px;
+}
+
+.celebration-cta h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.celebration-cta p{
+    color:#777;
+    max-width:800px;
+    margin:auto auto 40px;
+}
+
+@media(max-width:900px){
+
+    .celebration-grid,
+    .special-celebrations,
+    .celebration-feature{
+        grid-template-columns:1fr;
+    }
+
+    .celebration-hero-content h1{
+        font-size:3rem;
+    }
+
+    .celebration-intro h2,
+    .feature-left h2{
+        font-size:2rem;
+    }
+}
+/* ==================================
+   GALLERY / MEDIA PRODUCTION PAGE
+================================== */
+
+.gallery-hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.gallery-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.gallery-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.gallery-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:#fff;
+    z-index:2;
+    width:90%;
+}
+
+.gallery-hero-content span{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:.9rem;
+}
+
+.gallery-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    margin:25px 0;
+    line-height:1.15;
+}
+
+.gallery-hero-content p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* INTRO */
+
+.gallery-intro{
+    padding:120px 10%;
+    text-align:center;
+    background:#fff;
+}
+
+.gallery-intro h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+    color:#111;
+}
+
+.gallery-intro p{
+    max-width:900px;
+    margin:auto;
+    color:#777;
+    line-height:2;
+}
+
+/* MEDIA SECTIONS */
+
+.media-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    padding:120px 8%;
+}
+
+.reverse-media{
+    background:#fafafa;
+}
+
+.media-image img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+.media-content span{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    color:var(--gold);
+}
+
+.media-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin:20px 0;
+    color:#111;
+}
+
+.media-content p{
+    color:#777;
+    line-height:2;
+    font-size:1.05rem;
+}
+
+/* DRONE SHOWCASE */
+
+.drone-showcase{
+    position:relative;
+    height:750px;
+    overflow:hidden;
+}
+
+.drone-showcase img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.drone-showcase::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.drone-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:#fff;
+    z-index:2;
+    width:90%;
+}
+
+.drone-content h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    margin-bottom:25px;
+}
+
+.drone-content p{
+    max-width:850px;
+    margin:auto;
+    line-height:2;
+}
+
+/* PRODUCTION SERVICES */
+
+.production-services{
+    padding:120px 5%;
+    background:#fff;
+}
+
+.production-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.production-card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.4s;
+}
+
+.production-card:hover{
+    transform:translateY(-10px);
+}
+
+.production-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.production-card h3{
+    font-family:'Cinzel',serif;
+    text-align:center;
+    padding:25px;
+    color:#111;
+}
+
+/* EQUIPMENT */
+
+.equipment-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    padding:120px 8%;
+    background:#fafafa;
+}
+
+.equipment-left h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:30px;
+}
+
+.equipment-left ul{
+    list-style:none;
+}
+
+.equipment-left li{
+    padding:14px 0;
+    border-bottom:1px solid #e8e8e8;
+    color:#666;
+    font-size:1rem;
+}
+
+.equipment-left li::before{
+    content:"✓";
+    color:var(--gold);
+    margin-right:12px;
+    font-weight:700;
+}
+
+.equipment-right img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+/* TEAM */
+
+.team-showcase{
+    position:relative;
+    height:700px;
+}
+
+.team-showcase img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.team-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.team-overlay h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.team-overlay p{
+    max-width:850px;
+    line-height:2;
+}
+
+/* CTA */
+
+.gallery-cta{
+    padding:140px 20px;
+    text-align:center;
+    background:#fff;
+}
+
+.gallery-cta h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.gallery-cta p{
+    max-width:850px;
+    margin:auto;
+    color:#777;
+    line-height:2;
+    margin-bottom:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .media-section,
+    .equipment-section{
+        grid-template-columns:1fr;
+    }
+
+    .production-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .reverse-media .media-content{
+        order:1;
+    }
+
+    .reverse-media .media-image{
+        order:2;
+    }
+}
+
+@media(max-width:768px){
+
+    .gallery-hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .gallery-intro h2,
+    .media-content h2,
+    .equipment-left h2,
+    .gallery-cta h2{
+        font-size:2rem;
+    }
+
+    .drone-content h2,
+    .team-overlay h2{
+        font-size:2.3rem;
+    }
+
+    .production-grid{
+        grid-template-columns:1fr;
+    }
+
+    .media-image img,
+    .equipment-right img{
+        height:400px;
+    }
+
+    .drone-showcase,
+    .team-showcase{
+        height:550px;
+    }
+}
+/* ==================================
+   ABOUT PAGE
+================================== */
+
+.about-hero{
+    position:relative;
+    height:100vh;
+}
+
+.about-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.about-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.about-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:90%;
+}
+
+.about-hero-content span{
+    color:var(--gold);
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.about-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    margin:25px 0;
+}
+
+.about-story,
+.passion-section,
+.coverage-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    padding:120px 8%;
+}
+
+.about-story img,
+.passion-image img,
+.coverage-image img{
+    border-radius:16px;
+}
+
+.about-story-content span{
+    color:var(--gold);
+    text-transform:uppercase;
+}
+
+.about-story-content h2,
+.passion-content h2,
+.coverage-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin:20px 0;
+}
+
+.about-story-content p,
+.passion-content p,
+.coverage-content p{
+    color:#777;
+    line-height:2;
+    margin-bottom:20px;
+}
+
+.passion-section{
+    background:#fafafa;
+}
+
+.values-section{
+    padding:120px 5%;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.value-card{
+    padding:40px;
+    background:white;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.value-card h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:20px;
+}
+
+.value-card p{
+    color:#777;
+    line-height:1.8;
+}
+
+.team-section{
+    position:relative;
+    height:700px;
+}
+
+.team-section img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.team-content{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.team-content h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.team-content p{
+    max-width:900px;
+    line-height:2;
+}
+
+.about-cta{
+    padding:140px 20px;
+    text-align:center;
+}
+
+.about-cta h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.about-cta p{
+    max-width:900px;
+    margin:auto;
+    color:#777;
+    line-height:2;
+    margin-bottom:40px;
+}
+
+@media(max-width:900px){
+
+    .about-story,
+    .passion-section,
+    .coverage-section{
+        grid-template-columns:1fr;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-hero-content h1,
+    .team-content h2{
+        font-size:3rem;
+    }
+
+    .about-story-content h2,
+    .passion-content h2,
+    .coverage-content h2,
+    .about-cta h2{
+        font-size:2rem;
+    }
+}
+/* ==================================
+   CONTACT PAGE
+================================== */
+
+.contact-hero{
+    position:relative;
+    height:100vh;
+}
+
+.contact-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.contact-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.contact-hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:90%;
+}
+
+.contact-hero-content span{
+    color:var(--gold);
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.contact-hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    margin:25px 0;
+}
+
+.contact-info-section{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:100px 5%;
+}
+
+.contact-card{
+    text-align:center;
+    padding:50px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.contact-card h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:20px;
+}
+
+.contact-card p{
+    color:#777;
+    margin:10px 0;
+}
+
+.contact-form-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    padding:120px 8%;
+    background:#fafafa;
+}
+
+.form-content span{
+    color:var(--gold);
+    text-transform:uppercase;
+}
+
+.form-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin:20px 0;
+}
+
+.form-content p{
+    color:#777;
+    line-height:2;
+}
+
+.contact-form-container form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form-container input,
+.contact-form-container select,
+.contact-form-container textarea{
+    padding:18px;
+    border:1px solid #ddd;
+    font-family:'Montserrat',sans-serif;
+}
+
+.contact-showcase{
+    position:relative;
+    height:700px;
+}
+
+.contact-showcase img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.showcase-content{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.showcase-content h2{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+}
+
+.why-contact{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:120px 5%;
+}
+
+.why-card{
+    padding:40px;
+    text-align:center;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.why-card h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:20px;
+}
+
+.why-card p{
+    color:#777;
+}
+
+.map-section{
+    padding:120px 5%;
+}
+
+.map-content{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.map-content h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.map-placeholder iframe{
+    width:100%;
+    height:500px;
+    border:none;
+}
+
+.contact-cta{
+    text-align:center;
+    padding:140px 20px;
+}
+
+.contact-cta h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.contact-cta p{
+    max-width:900px;
+    margin:auto;
+    color:#777;
+    line-height:2;
+    margin-bottom:40px;
+}
+
+@media(max-width:900px){
+
+    .contact-info-section,
+    .contact-form-section,
+    .why-contact{
+        grid-template-columns:1fr;
+    }
+
+    .contact-hero-content h1{
+        font-size:3rem;
+    }
+
+    .form-content h2,
+    .map-content h2,
+    .contact-cta h2{
+        font-size:2rem;
+    }
+
+    .showcase-content h2{
+        font-size:2.5rem;
+    }
+}
